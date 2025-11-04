@@ -4,7 +4,10 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class NewsService {
-  private apiUrl = 'http://localhost:3000/news';
+  private apiUrl =
+    window.location.hostname === 'localhost'
+      ? 'http://localhost:10000/news'
+      : 'https://api-aemba.onrender.com/news';
 
   constructor(private http: HttpClient) {}
 
@@ -17,11 +20,10 @@ export class NewsService {
   }
 
   getNewsById(id: string): Observable<any> {
-  return this.http.get<any>(`${this.apiUrl}/${id}`);
-}
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }
 
-
-  deleteNews(slug: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${slug}`);
+  deleteNews(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }
