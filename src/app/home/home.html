@@ -1,0 +1,60 @@
+<body>
+  <div id="home-page">
+    <h1 id="tittle">Aemba</h1>
+    <h1 id="subtittle">Associação Emilia Machado</h1>
+    <p id="subtittle">"Eu Quero,
+      Eu Posso,
+      Eu Consigo!"</p>
+    <div class="button">
+      <button id="about" (click)="scrollToSection('Aboutus')">Quem somos nós?</button>
+    </div>
+  </div>
+  <section id="Aboutus">
+    <img src="../../assets/tela_inicial.png" alt="Imagem da AEMBA">
+    <div class="aboutus-text">
+      <h2>Quem somos</h2>
+      <p>
+        A Associação Emília Machado – BA (AEMBA) é uma organização sem fins
+        lucrativos dedicada a promover o bem-estar social e o desenvolvimento
+        da comunidade. Atuamos com projetos voltados à educação, cultura, meio
+        ambiente e inclusão social, sempre com o compromisso de transformar
+        realidades e gerar oportunidades. Com amor, solidariedade e trabalho em
+        equipe, acreditamos que pequenas ações podem causar grandes mudanças.
+      </p>
+    </div>
+  </section>
+  <h1 id="localizacao">Onde Estamos?</h1>
+  <div id="mapa">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!3m2!1spt-BR!2sbr!4v1760466693208!5m2!1spt-BR!2sbr!6m8!1m7!1sigqCLQrIErNfzvUQ5uEANg!2m2!1d-12.91329007668097!2d-38.46968891734519!3f137.75606149824281!4f22.592716664529647!5f0.7820865974627469"
+      width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p id="local"><i class="bi bi-geo-alt"></i> R. Vicente Celestino, 260 - 1° Andar - Mal. Rondon, Salvador - BA,
+      41280-000</p>
+  </div>
+  <div id="noticias">
+    <h1 id="newstitle">Noticias</h1>
+    <div>
+      <h1 class="subtittle">Fique por dentro de tudo</h1>
+      <p class="subtittle">Noticias sobre todas as nossas atividades</p>
+      <button>Noticias</button>
+    </div>
+  </div>
+<div id="parcerias">
+  <h1>Parcerias</h1>
+
+ <div class="carousel">
+  <button (click)="prevSlide()">‹</button>
+
+  <img 
+    [src]="images[currentIndex]" 
+    alt="Imagem do carrossel" 
+    class="slide"
+  />
+
+  <button (click)="nextSlide()">›</button>
+</div>
+
+<footer>
+
+</footer>

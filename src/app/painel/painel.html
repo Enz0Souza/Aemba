@@ -1,0 +1,51 @@
+<div class="painel-container">
+  <h2>Painel Administrativo — Criar Notícia</h2>
+
+  <div class="formulario">
+    <label>Título*</label>
+    <input [(ngModel)]="title" placeholder="Título da notícia" />
+
+    <label>Subtítulo</label>
+    <input [(ngModel)]="subtitle" placeholder="Subtítulo (opcional)" />
+
+    <label>Imagem de capa*</label>
+    <input type="file" (change)="onCoverImageUpload($event)" accept="image/*" />
+
+    <label>Parágrafos*</label>
+    <div *ngFor="let paragraph of paragraphs; let i = index" class="paragrafo-item">
+      <textarea [(ngModel)]="paragraph.text" rows="5" placeholder="Digite o parágrafo"></textarea>
+
+      <label>Adicionar imagens:</label>
+      <input type="file" (change)="onParagraphImageUpload($event, i)" multiple accept="image/*" />
+
+      <div class="preview-imagens">
+        <div *ngFor="let img of paragraph.imagesPreview; let j = index" class="img-item">
+          <img [src]="img" />
+          <button (click)="removerParagrafoImagem(i, j)">Remover</button>
+        </div>
+      </div>
+
+      <button class="remove" (click)="removeParagraph(i)">Remover Parágrafo</button>
+    </div>
+
+    <button class="add" (click)="addParagraph()">+ Adicionar Parágrafo</button>
+
+    <label><input type="checkbox" [(ngModel)]="useCarousel" /> Usar carrossel</label>
+
+    <div class="botoes">
+      <button (click)="visualizar()">Visualizar</button>
+      <button (click)="publicar()">Publicar</button>
+    </div>
+  </div>
+
+  <div *ngIf="previewVisible" class="preview">
+    <h3>Prévia</h3>
+    <h1>{{ title }}</h1>
+    <h3>{{ subtitle }}</h3>
+    <div *ngFor="let paragraph of paragraphs">
+      <p>{{ paragraph.text }}</p>
+      <div *ngFor="let img of paragraph.imagesPreview"><img [src]="img" /></div>
+    </div>
+    <button (click)="fecharPreview()">Fechar</button>
+  </div>
+</div>

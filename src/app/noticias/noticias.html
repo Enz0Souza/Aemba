@@ -1,0 +1,9 @@
+<div class="lista">
+  <div *ngFor="let noticia of noticias" class="card" (click)="abrirNoticia(noticia.id)">
+    <img [src]="'http://localhost:3000' + noticia.cover" class="capa" />
+    <h2>{{ noticia.title }}</h2>
+    <p>{{ noticia.subtitle }}</p>
+    <p id="data">{{ noticia.date | date:'dd/MM/yyyy' }}</p>
+  </div>
+</div>
+

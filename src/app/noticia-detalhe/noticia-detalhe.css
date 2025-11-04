@@ -1,0 +1,69 @@
+.detalhe {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  line-height: 1.7;
+  color: #333;
+}
+
+.detalhe h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.detalhe h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.detalhe .capa {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.detalhe p {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  color: #444;
+}
+
+.detalhe .paragrafo-imagens img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 12px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+@media (max-width: 768px) {
+  .detalhe {
+    padding: 15px 20px;
+    margin: 20px auto;
+  }
+
+  .detalhe h1 {
+    font-size: 2rem;
+  }
+
+  .detalhe h3 {
+    font-size: 1.1rem;
+  }
+
+  .detalhe p {
+    font-size: 0.95rem;
+  }
+}

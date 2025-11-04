@@ -1,0 +1,48 @@
+  .sobre-container {
+  width: 80%;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+}
+
+.sobre-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.sobre-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px; 
+  flex-wrap: wrap; 
+}
+
+.sobre-content img {
+  width: 700px; 
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#textosobre {
+  flex: 1; 
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 768px) {
+  .sobre-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-content img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #textosobre {
+    text-align: justify;
+  }
+}

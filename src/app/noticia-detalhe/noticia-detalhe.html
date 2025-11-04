@@ -1,0 +1,11 @@
+   <div *ngIf="noticia" class="detalhe">
+  <h1>{{ noticia.title }}</h1>
+  <h3>{{ noticia.subtitle }}</h3>
+  <img *ngIf="noticia.cover" [src]="'http://localhost:3000' + noticia.cover" class="capa" />
+  
+ <div *ngFor="let p of noticia.paragraphs">
+  <p>{{ p.text || p }}</p>
+  <div *ngIf="p.imagesPreview?.length">
+    <img *ngFor="let img of p.imagesPreview" [src]="'http://localhost:3000' + img" />
+  </div>
+</div>

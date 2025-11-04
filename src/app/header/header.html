@@ -1,0 +1,22 @@
+<header>
+  <div class="menu-container">
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="">Página Inicial</a>
+      <a href="">Participe do Projeto</a>
+      <a href="Noticias">Notícias</a>
+      <a href="Quero-Ajudar">Quero Ajudar</a>
+      <a href="Sobre-nós">Sobre nós</a>
+      <a href="Duvidas">Dúvidas</a>
+    </nav>
+  </div>
+
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <a href="">Página Inicial</a>
+    <a href="">Participe do Projeto</a>
+    <a href="Noticias">Notícias</a>
+    <a href="Quero-Ajudar">Quero Ajudar</a>
+    <a href="Sobre-nós">Sobre nós</a>
+    <a href="Duvidas">Dúvidas</a>
+  </div>
+</header>

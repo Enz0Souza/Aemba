@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+#titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Container dos cards */
+.card {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.card input {
+  display: none;
+}
+
+.card label {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.card .arrow {
+  transition: transform 0.3s ease;
+}
+
+.card input:checked + label .arrow {
+  transform: rotate(180deg);
+}
+
+.card .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 0;
+}
+
+.card input:checked ~ .content {
+  max-height: 500px; /* Ajuste conforme o tamanho do conteúdo */
+  padding: 10px 0;
+}
+
+.card .content p {
+  margin: 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #titulo {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
