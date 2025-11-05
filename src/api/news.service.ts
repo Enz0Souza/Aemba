@@ -7,7 +7,7 @@ export class NewsService {
   private apiUrl =
     window.location.hostname === 'localhost'
       ? 'http://localhost:10000/news'
-      : 'https://api-aemba.onrender.com/news';
+      : 'https://api-aemba-3.onrender.com';
 
   constructor(private http: HttpClient) {}
 
